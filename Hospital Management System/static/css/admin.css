@@ -1,0 +1,291 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0 5%;
+}
+
+h1, h2 {
+    background-color: white;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Form and Table Styling */
+form, table {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 0px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 0 4%;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form p #submit{
+    width:25%;
+    justify-self: center;
+    align-self: center;
+    padding: 12px 15px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+form p #submit:hover{
+    background-color: #45a049;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 2px solid black;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.hd a {
+    color: white;
+    text-decoration: none;
+    background: #E27B6E;
+    border-radius: 5px ;
+    border-top: 17.5px solid #E27B6E;
+    border-left: 20px solid #E27B6E;
+    border-right: 20px solid #E27B6E;
+    border-bottom: 15px solid #E27B6E;
+}
+
+.hd a:hover {
+    text-decoration: underline;
+}
+
+
+.error, .success, .info {
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Header Styling */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+.error {
+    color: #E27B6E;
+}
+.success {
+    color: green;
+}
+.info {
+    color: blue;
+}
+table {
+    border-collapse: collapse;
+}
+
+.hide{
+    display: none;
+}
+.btn{
+    display: flex;
+    margin: 20px 20px 0 20px;
+    h2{
+        padding: 15px 15px 10px 15px;
+        margin: 0;
+        font-size: 15px;
+        width: 20vw;
+        text-align: center;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    }
+}
+.present{
+    background-color:  lightblue;
+    border-bottom:3px solid  lightblue ;
+    z-index: 7;
+}
+.np{
+    border-bottom:3px solid white;
+}
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .pagination a {
+    padding: 8px 12px;
+    margin: 0 4px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #333;
+  }
+  .pagination a:hover {
+    background-color: #f0f0f0;
+  }
+  .pagination a.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+
+  .hd{
+    width: 100vw;
+    margin-left: -5vw;
+    background-color: #0096c7;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    h1{
+        background-color: transparent;
+        color: white;
+        margin-left: -15vw;
+    }
+    a{
+        margin-right: -15vw;
+    }
+  }
+  #showPassword {
+  display: none;
+}
+#showPassword + label::before {
+    content: "👁️‍🗨️"; /* Closed eye */
+    font-size: 20px;
+    margin-top: -10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  #showPassword:checked + label::before {
+    content: "👁️"; /* Open eye */
+  }
+  
+  #showPassword + label {
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 8px;
+    user-select: none;
+  }
+  /* Wrapper for password input and eye */
+  .password-wrapper {
+    position: relative;
+    width: 90%;
+  }
+  
+  /* Style the password input */
+  .password-input {
+    width: 100%;
+    padding: 12px 40px 12px 15px; /* Right padding for eye */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  /* Hide the checkbox itself */
+  #showPassword {
+    display: none;
+  }
+  
+  /* Eye icon label positioned at the end of the input field */
+  .toggle-eye::before {
+    content: "👁️‍🗨️"; /* Closed eye */
+    position: absolute;
+    top: 55%;
+    right: 5%;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Change to open eye when checked */
+  #showPassword:checked + .toggle-eye::before {
+    content: "👁️"; /* Open eye */
+  }
+  

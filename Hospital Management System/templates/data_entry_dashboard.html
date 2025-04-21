@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Entry Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/data.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/common.css') }}"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const testdateInput = document.getElementById("testdate");
+        if (testdateInput) {
+          const today = new Date().toISOString().split("T")[0];
+          testdateInput.setAttribute("max", today);
+        }
+
+        let All = document.getElementById("All");
+        let al = document.getElementById("all");
+        let New = document.getElementById("New");
+        let ne = document.getElementById("new");
+
+        All.classList.add("hide");
+        ne.classList.add("present");
+        al.classList.add("np");
+
+        al.addEventListener("click", () => {
+          All.classList.remove("hide");
+          New.classList.add("hide");
+          al.classList.add("present");
+          ne.classList.add("np");
+          al.classList.remove("np");
+          ne.classList.remove("present");
+        });
+
+        ne.addEventListener("click", () => {
+          New.classList.remove("hide");
+          All.classList.add("hide");
+          ne.classList.add("present");
+          al.classList.add("np");
+          ne.classList.remove("np");
+          al.classList.remove("present");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="hd">
+      <h1>Data Entry Operator</h1>
+      <a href="{{ url_for('logout') }}">Logout</a>
+      <a href="{{ url_for('reset_password') }}">Reset Password</a>
+    </div>
+
+    <div class="btn">
+      <h2 id="new">Record Diagnostic Test</h2>
+      <h2 id="all">Record Treatment Administered</h2>
+    </div>
+
+    <div id="New">
+      <form method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="form_name" value="test_form" />
+
+        {{ test_form.hidden_tag() }}
+        <p>{{ test_form.patient_id.label }} {{ test_form.patient_id() }}</p>
+        <p>{{ test_form.test_name.label }} {{ test_form.test_name() }}</p>
+        <p>{{ test_form.result.label }} {{ test_form.result() }}</p>
+        <p>
+          {{ test_form.test_date.label }} {{ test_form.test_date(type="date",
+          max=today) }}
+        </p>
+        <p>{{ test_form.pdf.label }} {{ test_form.pdf() }}</p>
+        <p id="submit">{{ test_form.submit() }}</p>
+      </form>
+
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %} {% for category, message in messages %} {% if
+      category.startswith('test_') %}
+      <p class="{{ category }}">{{ message }}</p>
+      {% endif %} {% endfor %} {% endif %} {% endwith %}
+    </div>
+
+    <div id="All">
+      <form method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="form_name" value="treatment_form" />
+        {{ treatment_form.hidden_tag() }}
+        <p>
+          {{ treatment_form.patient_id.label }} {{ treatment_form.patient_id()
+          }}
+        </p>
+        <p>
+          {{ treatment_form.doctor_id.label }} {{ treatment_form.doctor_id() }}
+        </p>
+        <p>
+          {{ treatment_form.treatment_name.label }} {{
+          treatment_form.treatment_name() }}
+        </p>
+        <p>
+          {{ treatment_form.description.label }} {{ treatment_form.description()
+          }}
+        </p>
+        <p>
+          {{ treatment_form.treatment_date.label }} {{
+          treatment_form.treatment_date(type="date", max=today) }}
+        </p>
+        <p id="submit">{{ treatment_form.submit() }}</p>
+      </form>
+
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %} {% for category, message in messages %} {% if
+      category.startswith('treatment_') %}
+      <p class="{{ category }}">{{ message }}</p>
+      {% endif %} {% endfor %} {% endif %} {% endwith %}
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if
+    category.startswith('data_entry_') %}
+    <p class="{{ category }}">{{ message }}</p>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+  </body>
+</html>

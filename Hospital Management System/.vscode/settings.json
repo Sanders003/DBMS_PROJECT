@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 33060,
+            "driver": "MySQL",
+            "name": "DBMS hospital Project",
+            "username": "root",
+            "connectionTimeout": 30,
+            "database": "mysql",
+            "askForPassword": true
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+[class*="_success"] {
+  color: #28a745;
+}
+
+[class*="_error"] {
+  color: #dc3545;
+}
+
+[class*="_info"] {
+  color: #17a2b8;
+}
+
+[class*="_warning"] {
+  background-color: #ffc107;
+  color: #212529;
+}

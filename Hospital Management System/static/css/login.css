@@ -1,0 +1,129 @@
+/* Center the form in the middle of the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Enlarged and styled form container */
+form {
+  background-color: white;
+  padding: 60px 80px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  width: 350px;
+}
+
+/* Label and input spacing */
+p {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+p#pass{
+  margin-bottom: 5px;
+}
+
+/* Input field styling */
+input[type="username"],
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Submit button styling */
+
+#btn1,#btn input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
+#btn1,#btn input:hover {
+  background-color: #45a049;
+}
+
+/* Login heading */
+#btn1,
+#btn {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Show password checkbox hidden but styled with label */
+#showPassword {
+  display: none;
+}
+
+#showPassword + label::before {
+  content: "👁️‍🗨️"; /* Closed eye */
+  font-size: 20px;
+  margin-top: -10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#showPassword:checked + label::before {
+  content: "👁️"; /* Open eye */
+}
+
+#showPassword + label {
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 8px;
+  user-select: none;
+}
+/* Wrapper for password input and eye */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Style the password input */
+.password-input {
+  width: 100%;
+  padding: 12px 40px 12px 15px; /* Right padding for eye */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Hide the checkbox itself */
+#showPassword {
+  display: none;
+}
+
+/* Eye icon label positioned at the end of the input field */
+.toggle-eye::before {
+  content: "👁️‍🗨️"; /* Closed eye */
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Change to open eye when checked */
+#showPassword:checked + .toggle-eye::before {
+  content: "👁️"; /* Open eye */
+}
