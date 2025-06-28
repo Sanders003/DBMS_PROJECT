@@ -1,0 +1,4 @@
+Flask
+bcrypt
+Werkzeug
+email-validator
