@@ -10,6 +10,15 @@ CREATE TABLE users (
     role ENUM('front_desk', 'data_entry', 'doctor', 'admin') NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+-- Insert default admin credentials into users
+INSERT INTO users (username, password, name, email, role)
+VALUES (
+  'admin',
+  '$2b$12$yjVP.tZDZoPlMICBAKSbne85.8FUHg7DrdC1AbVurKfSL5xC5h3S2', -- password: admin123 
+  'Admin User',
+  'admin@example.com',
+  'admin'
+);
 -- Rooms Table
 CREATE TABLE rooms (
     id INT AUTO_INCREMENT PRIMARY KEY,
