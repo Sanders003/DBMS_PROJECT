@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    }
+  </script>
+
+  <head>
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/login.css') }}"
+  />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/common.css') }}"
+    />
+  </head>
+  <body>
+    <form method="POST">
+      {{ form.hidden_tag() }}
+      <p>{{ form.role.label }} : {{ form.role() }}</p>
+      <p>{{ form.username.label }} : {{ form.username() }}</p>
+      <p id="pass">{{ form.password.label }}:</p>
+      <div class="password-wrapper">
+        {{ form.password(id="password", class="password-input") }}
+        <input type="checkbox" id="showPassword" onclick="togglePassword()" />
+        <label for="showPassword" class="toggle-eye"></label>
+      </div>
+      <p id="btn">{{ form.submit() }}</p>
+      <a href="{{ url_for('forgot_password') }}">Forgot Password</a>
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %} {% for category, message in messages %} {% if
+      category.startswith('login_') %}
+      <p class="{{ category }}">{{ message }}</p>
+      {% endif %} {% endfor %} {% endif %} {% endwith %}
+    </form>
+  </body>
+</html>
