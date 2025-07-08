@@ -120,7 +120,7 @@ Visit [http://localhost:5000](http://localhost:5000) in your browser.
 
 ## 📧 OTP and Email Setup
 
-For forgot password functionality via OTP, set up SMTP details inside `app.py` (if using email). You can mock this for now if needed.
+For forgot password functionality via OTP, set up SMTP details inside `app.py` (if using email).
 
 ## 📌 To Do / Improvements
 
@@ -133,10 +133,10 @@ For forgot password functionality via OTP, set up SMTP details inside `app.py` (
 ## 🤝 Contributing
 
 Pull requests are welcome. Please open an issue first to discuss major changes.
-Hemanth Kumar
-Prajwal
-Ramcharan
-Vamsi
+- [Hemanth Kumar](https://github.com/Sanders003)
+- [Prajwal](https://github.com/Megakyper)
+- Ramcharan
+- Vamsi
 
 ## 📄 License
 
