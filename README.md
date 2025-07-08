@@ -136,7 +136,7 @@ Pull requests are welcome. Please open an issue first to discuss major changes.
 - [Hemanth Kumar](https://github.com/Sanders003)
 - [Prajwal](https://github.com/Megakyper)
 - Ramcharan
-- Vamsi
+- [Vamsi](https://github.com/Raju-Manthena)
 
 ## 📄 License
 
