@@ -1,3 +1,4 @@
+
 # 🏥 Hospital Management System
 
 A web-based Hospital Management System built using **Flask** and **MySQL**, designed to manage hospital operations through role-specific dashboards including Admin, Doctor, Front Desk, and Data Entry.
@@ -143,4 +144,5 @@ Pull requests are welcome. Please open an issue first to discuss major changes.
 This project is for academic use under the [MIT License](LICENSE).
 
 ---
+
 
